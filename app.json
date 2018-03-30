@@ -3,7 +3,14 @@
     "name": "Kitten Tricks",
     "slug": "kitten-tricks",
     "githubUrl": "https://github.com/akveo/kittenTricks",
-    "sdkVersion": "24.0.0",
+    "sdkVersion": "26.0.0",
+    "packagerOpts": {
+      "sourceExts": [
+        "ts",
+        "tsx"
+      ],
+      "transformer": "node_modules/react-native-typescript-transformer/index.js"
+    },
     "icon": "./icon.png",
     "orientation": "portrait",
     "loading": {
@@ -21,6 +28,6 @@
       "package": "com.akveo.kittentricks",
       "versionCode": 16
     },
-    "version": "1.0.10"
+    "version": "1.0.0"
   }
 }

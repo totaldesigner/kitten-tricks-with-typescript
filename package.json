@@ -1,41 +1,97 @@
 {
-  "name": "kittenTricks",
-  "version": "1.0.9",
+  "name": "kitten-tricks-with-typescript",
+  "version": "1.0.0",
   "private": true,
-  "author": "akveo",
+  "main": "./node_modules/react-native-scripts/build/bin/crna-entry.js",
+  "author": "totaldesigner",
+  "pre-commit": "lint",
   "scripts": {
     "start": "react-native-scripts start",
     "eject": "react-native-scripts eject",
     "android": "react-native-scripts android",
     "ios": "react-native-scripts ios",
-    "test": "jest"
+    "lint": "npm run lint:tslint",
+    "lint:tslint": "tslint \"app/**/*.tsx\" \"app/**/*.ts\" \"test/**/*.tsx\" \"test/**/*.ts\"",
+    "test": "node node_modules/jest/bin/jest.js --coverage",
+    "test:clean": "rimraf ./coverage",
+    "test:watch": "jest --watchAll",
+    "coveralls": "cat ./coverage/lcov.info | coveralls"
   },
   "dependencies": {
-    "expo": "24.0.2",
+    "expo": "^26.0.0",
+    "expo-analytics": "^1.0.7",
     "hoist-non-react-statics": "2.3.1",
     "lodash": "4.17.4",
     "moment": "2.20.1",
-    "prop-types": "15.6.0",
-    "react": "16.0.0",
-    "react-native": "0.51.0",
-    "react-native-keyboard-spacer": "0.4.1",
-    "react-native-linear-gradient": "2.4.0",
-    "react-native-progress-bar": "0.1.2",
-    "react-native-switch-pro": "0.4.6",
-    "react-native-ui-kitten": "3.0.0",
-    "react-navigation": "1.0.0-beta.23",
-    "victory-native": "0.15.0",
-    "expo-analytics":"1.0.6"
+    "react": "^16.3.0",
+    "react-native": "^0.54.4",
+    "react-native-keyboard-spacer": "^0.4.1",
+    "react-native-linear-gradient": "^2.4.0",
+    "react-native-progress-bar": "^0.1.2",
+    "react-native-switch-pro": "^0.4.10",
+    "react-native-ui-kitten": "^3.0.0",
+    "react-navigation": "^1.5.8",
+    "tslib": "^1.9.0",
+    "victory-native": "^0.17.3"
   },
   "devDependencies": {
-    "babel-jest": "19.0.0",
-    "babel-preset-react-native": "1.9.1",
-    "jest": "19.0.2",
-    "react-test-renderer": "16.0.0-alpha.6",
-    "react-native-scripts": "1.9.0"
+    "@types/fbemitter": "^2.0.32",
+    "@types/jest": "^22.2.2",
+    "@types/react": "^16.0.41",
+    "@types/react-native": "^0.52.19",
+    "@types/react-test-renderer": "^16.0.1",
+    "babel-preset-env": "^1.6.1",
+    "jest-expo": "^26.0.0",
+    "react-native-scripts": "^1.13.1",
+    "react-native-typescript-transformer": "*",
+    "react-test-renderer": "^16.3.0",
+    "rimraf": "^2.6.2",
+    "ts-jest": "^22.4.2",
+    "tslint": "^5.9.1",
+    "tslint-config-prettier": "*",
+    "tslint-react": "^3.5.1",
+    "typescript": "^2.8.1"
+  },
+  "babel": {
+    "presets": [
+      "babel-preset-expo"
+    ],
+    "env": {
+      "development": {
+        "plugins": [
+          "transform-react-jsx-source"
+        ]
+      }
+    }
   },
   "jest": {
-    "preset": "react-native"
-  },
-  "main": "./app/app.js"
+    "preset": "jest-expo",
+    "coverageThreshold": {
+      "global": {
+        "statements": 98,
+        "branches": 91,
+        "functions": 98,
+        "lines": 98
+      }
+    },
+    "transform": {
+      "^.+\\.jsx?$": "<rootDir>/node_modules/babel-jest",
+      "^.+\\.tsx?$": "<rootDir>/node_modules/ts-jest/preprocessor.js"
+    },
+    "transformIgnorePatterns": [
+      "node_modules/(?!react-native|react-navigation)/"
+    ],
+    "testRegex": "(/__tests__/.*|(\\.|/)(test|spec))\\.(jsx?|tsx?)$",
+    "moduleFileExtensions": [
+      "ts",
+      "tsx",
+      "js",
+      "jsx",
+      "json",
+      "ios.ts",
+      "ios.tsx",
+      "android.ts",
+      "android.tsx"
+    ]
+  }
 }
