@@ -39,7 +39,7 @@ export class Blogposts extends React.Component<BlogpostsProps, BlogpostsState> {
   }
 
   _keyExtractor(post) {
-    return post.id
+    return post.id.toString()
   }
 
   _renderItem(info) {

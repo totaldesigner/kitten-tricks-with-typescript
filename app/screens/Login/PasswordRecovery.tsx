@@ -53,7 +53,9 @@ export class PasswordRecovery extends React.Component<PasswordRecoveryProps, Pas
             Enter your email below to receive your password reset instructions
           </RkText>
         </View>
-        <GradientButton style={styles.save} text="SEND" />
+        <GradientButton style={styles.save} rkType="large" text="SEND" onPress={() => {
+          this.props.navigation.goBack()
+        }} />
       </View>
     )
   }

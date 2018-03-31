@@ -35,7 +35,7 @@ export class Articles4 extends React.Component<Articles4Props, Articles4State> {
   }
 
   _keyExtractor(post) {
-    return post.id
+    return post.id.toString()
   }
 
   _renderItem(info) {

@@ -56,8 +56,8 @@ export class LoginV1 extends React.Component<LoginV1Props, LoginV1State> {
 
     return (
       <RkAvoidKeyboard
-        onStartShouldSetResponder={() => true}
-        onResponderRelease={() => Keyboard.dismiss()}
+        onStartShouldSetResponder={(e) => true}
+        onResponderRelease={(e) => Keyboard.dismiss()}
         style={styles.screen}>
         {image}
         <View style={styles.container}>
@@ -74,7 +74,9 @@ export class LoginV1 extends React.Component<LoginV1Props, LoginV1State> {
           </View>
           <RkTextInput rkType="rounded" placeholder="Username" />
           <RkTextInput rkType="rounded" placeholder="Password" secureTextEntry={true} />
-          <GradientButton text="LOGIN" />
+          <GradientButton text="LOGIN" rkType="large" onPress={() => {
+            this.props.navigation.goBack()
+          }} />
           <View style={styles.footer}>
             <View style={styles.textRow}>
               <RkText rkType="primary3">Don’t have an account?</RkText>

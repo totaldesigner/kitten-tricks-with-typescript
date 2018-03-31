@@ -39,6 +39,13 @@ export class Themes extends React.Component {
           <Image style={styles.image} source={require('../../assets/images/lightThemeImage.png')} />
           <GradientButton
             text="APPLY"
+            onPress={() => {
+              StatusBar.setBarStyle('dark-content', true)
+              if (Platform.OS === 'android') {
+                StatusBar.setBackgroundColor(KittenTheme.colors.screen.base)
+              }
+              RkTheme.setTheme(KittenTheme);
+            }}
           />
         </View>
         <View style={styles.container}>
@@ -46,6 +53,13 @@ export class Themes extends React.Component {
           <Image style={styles.image} source={require('../../assets/images/darkThemeImage.png')} />
           <GradientButton
             text="APPLY"
+            onPress={() => {
+              RkTheme.setTheme(DarkKittenTheme)
+              StatusBar.setBarStyle('light-content', true)
+              if (Platform.OS === 'android') {
+                StatusBar.setBackgroundColor(DarkKittenTheme.colors.screen.base)
+              }
+            }}
           />
         </View>
       </View>

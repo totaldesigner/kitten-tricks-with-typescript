@@ -38,7 +38,7 @@ export class Articles2 extends React.Component<Articles2Props, Articles2State> {
   }
 
   _keyExtractor(post) {
-    return post.id
+    return post.id.toString()
   }
 
   _renderItem(info) {

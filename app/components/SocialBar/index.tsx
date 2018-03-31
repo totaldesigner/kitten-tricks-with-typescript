@@ -12,7 +12,7 @@ interface SocialBarProps {
   likes?: number
   rkType?: string
   shares?: number
-  showLabel?: string
+  showLabel?: boolean
 }
 
 interface SocialBarState {

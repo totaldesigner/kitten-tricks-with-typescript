@@ -38,7 +38,7 @@ export class Articles1 extends React.Component<Articles1Props, Articles1State> {
   }
 
   _keyExtractor(post) {
-    return post.id
+    return post.id.toString()
   }
 
   _renderItem(info) {
@@ -63,9 +63,8 @@ export class Articles1 extends React.Component<Articles1Props, Articles1State> {
 
   render() {
     const info = {
-      item: null,
+      item: this.data[0],
     }
-    info.item = this.data[0]
     return (
       <FlatList data={this.data}
         renderItem={this.renderItem}
