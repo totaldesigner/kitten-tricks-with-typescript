@@ -9,7 +9,7 @@ import { scale, scaleVertical } from '../../utils/scale'
 export class Themes extends React.Component {
   static navigationOptions = {
     title: 'Theme'.toUpperCase(),
-  };
+  }
 
   constructor(props) {
     super(props)
@@ -44,7 +44,7 @@ export class Themes extends React.Component {
               if (Platform.OS === 'android') {
                 StatusBar.setBackgroundColor(KittenTheme.colors.screen.base)
               }
-              RkTheme.setTheme(KittenTheme);
+              RkTheme.setTheme(KittenTheme)
             }}
           />
         </View>

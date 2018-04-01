@@ -14,7 +14,7 @@ import { SocialBar } from '../../components'
 import { data } from '../../data'
 
 interface Articles4Props {
-  navigation: any;
+  navigation: any
 }
 
 interface Articles4State {
@@ -24,7 +24,7 @@ interface Articles4State {
 export class Articles4 extends React.Component<Articles4Props, Articles4State> {
   static navigationOptions = {
     title: 'Article List'.toUpperCase(),
-  };
+  }
   private data
   private renderItem
 

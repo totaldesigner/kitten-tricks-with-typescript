@@ -16,7 +16,7 @@ import { GradientButton } from '../../components/GradientButton'
 import { scaleVertical } from '../../utils/scale'
 
 interface LoginV2Props {
-  navigation: any;
+  navigation: any
 }
 
 interface LoginV2State {
@@ -26,7 +26,7 @@ interface LoginV2State {
 export class LoginV2 extends React.Component<LoginV2Props, LoginV2State> {
   static navigationOptions = {
     header: null,
-  };
+  }
 
   constructor(props) {
     super(props)

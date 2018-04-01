@@ -16,7 +16,7 @@ import { data } from '../../data'
 import * as moment from 'moment'
 
 interface Articles2Props {
-  navigation: any;
+  navigation: any
 }
 
 interface Articles2State {
@@ -26,7 +26,7 @@ interface Articles2State {
 export class Articles2 extends React.Component<Articles2Props, Articles2State> {
   static navigationOptions = {
     title: 'Article List'.toUpperCase(),
-  };
+  }
   private data
   private renderItem
 

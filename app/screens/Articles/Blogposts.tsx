@@ -15,7 +15,7 @@ import {data} from '../../data'
 import * as moment from 'moment'
 
 interface BlogpostsProps {
-  navigation: any;
+  navigation: any
 }
 
 interface BlogpostsState {
@@ -25,7 +25,7 @@ interface BlogpostsState {
 export class Blogposts extends React.Component<BlogpostsProps, BlogpostsState> {
   static navigationOptions = {
     title: 'Blogposts'.toUpperCase(),
-  };
+  }
   private data
   private renderItem
 

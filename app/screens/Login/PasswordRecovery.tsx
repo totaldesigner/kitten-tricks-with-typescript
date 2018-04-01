@@ -14,7 +14,7 @@ import { GradientButton } from '../../components/'
 import { scaleVertical } from '../../utils/scale'
 
 interface PasswordRecoveryProps {
-  navigation: any;
+  navigation: any
 }
 
 interface PasswordRecoveryState {
@@ -24,7 +24,7 @@ interface PasswordRecoveryState {
 export class PasswordRecovery extends React.Component<PasswordRecoveryProps, PasswordRecoveryState> {
   static navigationOptions = {
     header: null,
-  };
+  }
 
   constructor(props) {
     super(props)

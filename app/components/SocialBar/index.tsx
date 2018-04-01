@@ -22,13 +22,13 @@ interface SocialBarState {
 }
 
 export class SocialBar extends RkComponent<SocialBarProps, SocialBarState> {
-  componentName = 'SocialBar';
+  componentName = 'SocialBar'
   typeMapping = {
     container: {},
     section: {},
     icon: {},
     label: {},
-  };
+  }
   private likes
   private comments
   private shares

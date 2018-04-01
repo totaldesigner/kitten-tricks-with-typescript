@@ -9,15 +9,15 @@ import { scale, scaleVertical } from '../../utils/scale'
 const timeFrame = 500
 
 interface SplashScreenProps {
-  navigation: any;
+  navigation: any
 }
 
 interface SplashScreenState {
-  progress: any;
+  progress: any
 }
 
 export class SplashScreen extends React.Component<SplashScreenProps, SplashScreenState> {
-  private timer;
+  private timer
 
   constructor(props) {
     super(props)

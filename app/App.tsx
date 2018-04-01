@@ -37,7 +37,7 @@ const KittenApp = StackNavigator({
       drawerOpenRoute: 'DrawerOpen',
       drawerCloseRoute: 'DrawerClose',
       drawerToggleRoute: 'DrawerToggle',
-      contentComponent: (props) => renderSideMenu(props)
+      contentComponent: (props) => renderSideMenu(props),
     }),
   },
 }, {
@@ -47,7 +47,7 @@ const KittenApp = StackNavigator({
 export default class App extends React.Component {
   state = {
     loaded: false,
-  };
+  }
 
   componentWillMount() {
     this.loadAssets()
@@ -64,7 +64,7 @@ export default class App extends React.Component {
       'Roboto-Light': require('./assets/fonts/Roboto-Light.ttf'),
     })
     this.setState({ loaded: true })
-  };
+  }
 
   handleNavigationStateChange = (prevState, currentState) => {
     const currentScreen = getCurrentRouteName(currentState)
@@ -89,3 +89,5 @@ export default class App extends React.Component {
     )
   }
 }
+
+Expo.registerRootComponent(App)
